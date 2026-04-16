@@ -1,42 +1,194 @@
 .container {
+  display: flex;
+  width: 100%;
+  min-height: 200px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+
+
+  .leftSection {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    .logoWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+
+      .logo {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+
+      .companyName {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #174855;
+        letter-spacing: 0.05em;
+        margin: 0;
+      }
+
+      .tagline {
+        font-size: 0.875rem;
+        color: #6b7280;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+  }
+
+  .rightSection {
+    flex: 1;
+    background-color: #174855;
+    color: #ffffff;
+    padding: 24px 32px;
     display: flex;
     flex-direction: column;
-    height: 200px;
-    width: 100vw;
-    box-shadow: 0px 5px 5px rgb(99, 94, 94);
-    background-image: url("./wide_edited.webp");
-    background-size: cover;
+    justify-content: center;
+    gap: 12px;
 
-    button {
-        margin-top:30px;
-        width:150px;
-        padding-top:5px;
-        padding-bottom:5px;
-        margin-left:20px;
-        background-color: #db700d;
-        border: 0px;
-        color: white;
-        border-radius: 5px;
-        
+    .contactTitle {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      opacity: 0.95;
     }
 
+    .contactItem {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #ffffff; // 🔥 Цвет текста для ссылок
+      text-decoration: none; // 🔥 Убираем подчёркивание
+      transition: opacity 0.2s ease;
 
+      .icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        opacity: 0.9;
+      }
 
-    .moto {
-        color: #FFFFFF;
-        margin-left: 20px;
-        margin-top: 12%;
-        height: 20%;
-        width: 100%;
+      span {
+        word-break: break-word;
+      }
 
-        h1 {
-            font-size: 14px;
-            
+      // 🔥 Эффект при наведении
+      &:hover {
+        opacity: 0.85;
+        text-decoration: underline;
+      }
 
-        }
-
-        span {
-            font-size: 10px;
-        }
+      // 🔥 Для мобильных — увеличенная область нажатия
+      @media (max-width: 768px) {
+        padding: 4px 0;
+        min-height: 4px; // 🔥 Минимальная высота для тач-интерфейсов
+      }
     }
+  }
+}
+
+// 🔹 Адаптив для планшетов
+@media (max-width: 968px) {
+  .container {
+    flex-direction: column;
+
+    .leftSection {
+      padding: 24px;
+
+      .logoWrapper {
+        .logo {
+          width: 80px;
+          height: 80px;
+        }
+
+        .companyName {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .rightSection {
+      padding: 24px;
+      gap: 10px;
+
+      .contactTitle {
+        font-size: 1.1rem;
+      }
+
+      .contactItem {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// 🔹 Адаптив для мобильных
+@media (max-width: 640px) {
+  .container {
+    min-height: auto;
+
+    .leftSection {
+      padding: 20px 16px;
+
+      .logoWrapper {
+        .logo {
+          width: 70px;
+          height: 70px;
+        }
+
+        .companyName {
+          font-size: 1.1rem;
+        }
+
+        .tagline {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .rightSection {
+      padding: 20px 16px;
+
+      .contactTitle {
+        font-size: 1rem;
+        margin-bottom: 12px;
+      }
+
+      .contactItem {
+        font-size: 0.85rem;
+        gap: 10px;
+
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
+
+// 🔹 Очень маленькие экраны
+@media (max-width: 375px) {
+  .container {
+    .rightSection {
+      .contactItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+  }
 }

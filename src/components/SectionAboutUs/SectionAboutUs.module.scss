@@ -1,59 +1,243 @@
-.HeaderOftheSection {
+.section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #ffffff;
 
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .sectionTitle {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    text-align: center;
 
     h2 {
-        color: #05487C;
-        text-align: center;
-        font-size: 14px;
-    }
-
-    hr {
-        width: 80px;
-        margin-top: 5px;
-        color: #05487C;
-        height: 2px;
-        border: none;
-        background-color: #05487C;
-        text-align: center;
-    }
-
-
-}
-
-.TextPart {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-
-    p:first-child {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-size: 12px;
-
-        color: #7E7E7E;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #174855;
+      margin: 0 0 12px;
+      letter-spacing: 0.02em;
     }
 
     p {
-        margin-top: 10px;
-        font-size: 14px;
-        text-wrap: pretty;
-        color: #7E7E7E;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-
-    .imageContainer {
-        position: relative;
-        width: 100%;
-        /* 100% от .TextPart */
-        height: 300px;
-        /* или другая высота */
-        margin: 20px 0;
-        /* отступ сверху/снизу */
-        border-radius: 12px;
-        overflow: hidden;
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 0.875rem;
+      }
     }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  // 🔥 Пары карточек на ПК
+  .servicePair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+
+    @media (max-width: 968px) {
+      gap: 30px;
+    }
+
+    // @media (max-width: 768px) {
+    //   grid-template-columns: 1fr;
+    //   gap: 20px;
+    // }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 15px; 
+  box-shadow: 5px 5px 5px rgb(208, 208, 208);
+  
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  // 🔥 Текстовая карточка — выравнивание по левому краю
+  // &.textCard {
+  //   align-items: flex-start;
+  //   text-align: left;
+  //   justify-content: center;
+
+  //   @media (max-width: 768px) {
+  //     align-items: center;
+  //     text-align: center;
+  //   }
+  // }
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    height: 100px;
+  }
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #174855;
+  line-height: 1.4;
+  margin: 0;
+  letter-spacing: 0.01em;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.textWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.cardList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #374151;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+
+
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+      text-align: center;
+      padding-left: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+// 🔥 Desktop-оптимизация (большие экраны)
+@media (min-width: 1200px) {
+  .section {
+    padding: 80px 40px;
+  }
+
+  .container {
+    gap: 50px;
+
+    .servicePair {
+      gap: 60px;
+    }
+  }
+
+  .imageWrapper {
+    height: 140px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .cardList li {
+    font-size: 1rem;
+    
+  }
+}
+
+// 🔥 Tablet адаптив
+@media (max-width: 968px) {
+  .section {
+    padding: 40px 20px;
+  }
+
+  .container {
+    .servicePair {
+      gap: 30px;
+    }
+  }
+}
+
+// 🔥 Mobile адаптив
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 16px;
+
+    .sectionTitle {
+      margin-bottom: 30px;
+    }
+  }
+
+  .container {
+    gap: 30px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .imageWrapper {
+    height: 90px;
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .cardList {
+    gap: 6px;
+    
+
+    li {
+      font-size: 0.875rem;
+    }
+  }
 }
