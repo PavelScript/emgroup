@@ -1,0 +1,15 @@
+.container {
+    width:100vw;
+    background-color:rgb(143, 34, 34);
+    padding: 15px 0;
+    display:flex;
+    justify-content:space-around;
+
+    .link {
+    color: white;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+    }}
