@@ -13,7 +13,38 @@
     "Helvetica Neue",
     Arial,
     sans-serif;
+
 }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #174855;
+      margin: 0 0 12px;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #6b7280;
+      margin: 0;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+      }
+    }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -27,6 +58,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
 
 body {
   color: var(--foreground);

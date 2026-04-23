@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <CategorySelector />
       <section className={styles.asutpSection}>
-        Мы занимаемся поставками оборудования АСУ ТП
+        <p>Мы занимаемся поставками оборудования АСУ ТП</p>
 <div className={styles.imageWrapper}>
            <Image 
                   src="/cabinet.jpg"
@@ -19,7 +19,7 @@ export default function Home() {
                   style={{ 
                     width: '100%', 
                     height: '100%', 
-                    objectFit: 'contain' // 🔥 Пропорциональное вписывание
+                    objectFit: 'contain' 
                   }}
                 /></div>
       </section>
