@@ -9,7 +9,7 @@ const Header = () => {
         <div className={styles.logoWrapper}>
           <div className={styles.logo}>
             <Image
-              src="/EMGroup.svg"
+              src="/emlogo.png"
               alt="ЕМ ГРУПП — логотип"
               fill
               priority

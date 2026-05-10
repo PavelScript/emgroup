@@ -12,7 +12,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "ЕМ-ГРУПП автоматизация",
   description: "Услуги в области автоматизации и метрологии",
-  icons: "/favicon.svg",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({

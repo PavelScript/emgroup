@@ -10,13 +10,13 @@ export default function Home() {
       <CategorySelector />
       <section className={styles.asutpSection}>
         <div className={styles.sectionTitle}>
-          <h2>Оборудование АСУ ТП</h2>
-          <p>Мы занимаемся поставками оборудования АСУ ТП</p>
+          <h2>Метрология</h2>
+          <p>Мы занимаемся поставками метрологического оборудования и поверкой</p>
         </div>
         <div className={styles.asutpInfo}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/plc.jpg"
+              src="/cabinet.jpg"
               alt=""
               width={200}
               height={200}
