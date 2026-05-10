@@ -16,12 +16,14 @@ const SectionAboutUs = () => {
       <div className={styles.container}>
         <Card
           imageLink="/plc.jpg"
+          linkToPage="/asutp"
           title={<>Поставка ПЛК</>}
           description="Siemens | Schneider | Allen-Bradley | B&R | Yokogawa"
           alt="Программируемые логические контроллеры"
         />
         <Card
           imageLink="/sensors.jpg"
+          linkToPage="/metrology"
           title={<>Метрологические услуги</>}
           description="Поверка в лаборатории | Поставка датчиков"
           alt="Метрологические услуги"
@@ -30,6 +32,7 @@ const SectionAboutUs = () => {
       <div className={styles.widecardContainer}>
         <Cardwide
           imageLink="/cabinet.jpg"
+          linkToPage="/metrology"
           title={<>Монтаж шкафов автоматики</>}
           description=""
           alt="Монтаж шкафов автоматики"

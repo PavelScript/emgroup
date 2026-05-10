@@ -1,5 +1,6 @@
 import styles from "./Header.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -8,6 +9,7 @@ const Header = () => {
       <div className={styles.leftSection}>
         <div className={styles.logoWrapper}>
           <div className={styles.logo}>
+            <Link href="/">
             <Image
               src="/emlogo.png"
               alt="ЕМ ГРУПП — логотип"
@@ -16,6 +18,7 @@ const Header = () => {
               sizes="(max-width: 768px) 80px, 100px"
               style={{ objectFit: "contain" }}
             />
+            </Link>
           </div>
           <div className={styles.companyName}>ЕМ ГРУПП</div>
           <div className={styles.tagline}>Метрология | Автоматизация</div>
