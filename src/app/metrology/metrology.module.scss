@@ -96,6 +96,7 @@ $breakpoint-tablet: 1024px;
 
     // Список датчиков (левая колонка)
     .leftColumn {
+        margin-left:0px;
       ul {
         li {
           padding-left: calc($icon-size-lg + 16px);
@@ -222,6 +223,10 @@ $breakpoint-tablet: 1024px;
           width: $icon-size-sm;
           height: $icon-size-sm;
         }
+
+      }
+      .rightColumn ul {
+            margin-left: 1rem;
       }
     }
 
