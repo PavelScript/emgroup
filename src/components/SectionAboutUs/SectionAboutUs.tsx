@@ -34,7 +34,7 @@ const SectionAboutUs = () => {
           imageLink="/cabinet.jpg"
           linkToPage="/metrology"
           title={<>Монтаж шкафов автоматики</>}
-          description=""
+          description="Проектирование | Сборка | ПНР"
           alt="Монтаж шкафов автоматики"
         />
       </div>

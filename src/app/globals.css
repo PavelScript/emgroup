@@ -24,10 +24,25 @@
       letter-spacing: 0.02em;
     }
 
+    h3{
+       color: #174855;
+    }
+
     p {
       font-size: 0.95rem;
       font-weight: 400;
       color: #6b7280;
+      margin: 0;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+       ul {
+      font-size: 1.2 rem;
+      font-weight: 600;
+      color: #252525;
       margin: 0;
       line-height: 1.5;
       max-width: 600px;
