@@ -32,7 +32,7 @@ const SectionAboutUs = () => {
       <div className={styles.widecardContainer}>
         <Cardwide
           imageLink="/cabinet.jpg"
-          linkToPage="/metrology"
+          linkToPage="/asutp"
           title={<>Монтаж шкафов автоматики</>}
           description="Проектирование | Сборка | ПНР"
           alt="Монтаж шкафов автоматики"
