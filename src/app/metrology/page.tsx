@@ -9,6 +9,7 @@ export default function Home() {
       <Header />
       <CategorySelector />
       <section className={styles.asutpSection}>
+        <h1>Метрологическое обеспечение</h1>
         <div className={styles.flexContainer}>
           <div className={styles.leftColumn}>
             <div className={styles.title}>
@@ -30,10 +31,10 @@ export default function Home() {
               <h3>МЕТРОЛОГИЧЕСКИЕ УСЛУГИ</h3>
             </div>
             <ul>
-              <li>Первичная и периодическая поверка</li>
-              <li>Калибровка датчиков</li>
-              <li>Подготовка к государственной поверке</li>
-              <li>Консультации</li>
+              <li><p className={styles.transmitterCat}>Первичная и периодическая поверка</p></li>
+              <li><p className={styles.transmitterCat}>Калибровка датчиков</p></li>
+              <li><p className={styles.transmitterCat}>Подготовка к государственной поверке</p></li>
+              <li><p className={styles.transmitterCat}>Консультации</p></li>
             </ul>
           </div>
         </div>

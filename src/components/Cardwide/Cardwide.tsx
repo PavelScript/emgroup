@@ -12,9 +12,9 @@ interface CardProps {
 
 const Cardwide = ({ imageLink, linkToPage, title, description, alt = "Услуга" }: CardProps) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.imageWrapper}>
-        <Link href={linkToPage}>
+    <Link href={linkToPage} className={styles.cardLink}>
+      <div className={styles.card}>
+        <div className={styles.imageWrapper}>
           <Image
             src={imageLink}
             alt={alt}
@@ -26,14 +26,14 @@ const Cardwide = ({ imageLink, linkToPage, title, description, alt = "Услуг
               objectFit: 'contain'
             }}
           />
-          </Link>
+        </div>
+        <div className={styles.text}>
+          <h3 className={styles.title}>{title}</h3>
+          {description && <p className={styles.description}>{description}</p>}
+        </div>
       </div>
-      <div className={styles.text}>
-        <h3 className={styles.title}>{title}</h3>
-        {description && <p className={styles.description}>{description}</p>}
-      </div>
-    </div>
+    </Link>
   );
 };
 
-export default Cardwide;  
+export default Cardwide;

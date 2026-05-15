@@ -1,0 +1,16 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M50 85C50 85 82 75 82 45V20L50 10L18 20V45C18 75 50 85 50 85Z" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2.5" stroke-linejoin="round"/>
+  
+  <path d="M28 45V35H38V40H48V35H58V40H68V35H72V55H28V45Z" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <line x1="28" y1="55" x2="72" y2="55" stroke="#2c3e50" stroke-width="2"/>
+  
+  <path d="M50 22L52 27H57L53 30L54 35L50 32L46 35L47 30L43 27H48L50 22Z" fill="#f1c40f" stroke="#2c3e50" stroke-width="1"/>
+  <circle cx="38" cy="27" r="1.5" fill="#f1c40f"/>
+  <circle cx="62" cy="27" r="1.5" fill="#f1c40f"/>
+  
+  <path d="M35 65L45 75L35 85" fill="none" stroke="#2980b9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M65 65L55 75L65 85" fill="none" stroke="#27ae60" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <text x="50" y="62" font-family="Arial, sans-serif" font-size="5" font-weight="bold" fill="#7f8c8d" text-anchor="middle">REPLACEMENT</text>
+</svg>
